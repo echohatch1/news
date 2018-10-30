@@ -1,0 +1,330 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* ------------- BODY ------------- */
+body {
+	font-family: $defaultFont;
+	font-size: 16px;
+	font-weight: $normalWeight;
+    min-height: 100%;
+    position: relative;
+    button {
+        background-color: $secondaryColor;
+        height: 30px;
+        border-radius: 8px;
+        border: none;
+        margin-top: $gutterdbl;
+        margin-bottom: $gutterdbl;
+        color: $fontColor;
+    }
+    button:hover {
+        background-color: lighten($secondaryColor, 30%);
+        color: $primaryColor;
+        cursor: pointer;
+}
+
+    input {
+        border-radius: 2px;
+    }
+    a {
+        text-decoration: none;
+        color: $secondaryColor;
+        font-weight: 500;
+    }
+}
+
+
+/* ------------- HEADER ------------- */
+header {
+    height:130px;
+    max-width: $maxWidth;
+    background-color: $altColor;
+    position: relative;
+    .header-div {
+        max-width: $maxWidth;
+    }
+	h1, h2 {
+        padding-left: $gutterdbl; 
+        font-weight: $boldWeight;
+        position: relative;
+        bottom: 0;
+    } //end both
+
+    
+	h1{
+        padding-top:35px;
+        font-size: 2rem;
+        color: $fontColor;
+    } //end h1
+    
+	h2{
+        font-size: 1.2rem;
+        margin-top: .5rem;
+        color: $fontColor;
+        
+    } //end h2
+    
+/* -------- search bar -------------- */
+    .search-bar {
+        width: 180px;
+        position: absolute;
+        bottom: -32px;
+        right: 0;
+    }
+} //end header
+
+
+
+/*  ------------- NAV -------------  */
+nav {
+    max-width: $maxWidth;
+    .topnav {
+    background-color: $primaryColor;
+    overflow: hidden;
+    margin-bottom: $gutterdbl;
+}
+    .topnav a {
+    color: $fontColor;
+    float: left;
+    display: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+    .active {
+    background-color: $secondaryColor;
+    color: white;
+}
+    .topnav .icon {
+    float: left;
+    display: block;
+    padding: 14px 16px;
+}
+    .topnav a:first-child {height: 44.5px}
+    .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+  }
+} // end nav
+
+
+
+/*  ------------- MAIN -------------  */
+
+main {
+    min-height: 20rem;
+    display: block;
+    float: left;
+    clear: both;
+    #main-div {
+        margin-bottom: $gutterdbl;
+        
+    }
+    
+	h1 {
+		font-size: 2rem;
+		margin-top: 1rem;
+		color: $primaryColor;
+	} // end h1
+	
+	h2 {
+		font-size: 1.5rem;
+		margin: .75rem 0 .5rem 0;
+		color: $secondaryColor;
+	} // end h2
+	
+    .lawer-card {
+        height: 50px;
+        background: $altColor;
+        margin-bottom: $gutterdbl;
+        padding-bottom: $gutter;
+        content: "";
+        display: table;
+        clear: both;
+        text-align: center;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 8px;
+        h2 {
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: $fontColor;
+        }
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        button {
+            padding-left: $gutterdbl * 2;
+            padding-right: $gutterdbl * 2;
+        }
+    }
+    
+    .space {
+        height: 10px;
+    }
+    
+    .call-button {
+        
+        button {
+            width: 100%;
+            height: 60px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+    }
+    
+       .blog-card {
+        height: 50px;
+        background: $altColor;
+        margin-bottom: $gutterdbl;
+        content: "";
+        display: table;
+        clear: both;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 8px;
+        .blog-text {
+            margin-left: $gutterdbl;
+            margin-right: $gutterdbl;
+               
+           }
+        h2 {
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: $fontColor;
+            text-align: left;
+        }
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+                border-radius: 8px 8px 0 0;
+            }
+        }
+           button {
+               width: 100%;
+               margin-bottom: 0;
+               border-radius: 0 0 8px 8px;
+           }
+    }
+    
+    .tip-card {
+        height: 50px;
+        background: $altColor;
+        margin-bottom: $gutterdbl;
+        content: "";
+        display: table;
+        clear: both;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 8px;
+        .blog-text {
+            margin: $gutterdbl;
+               
+           }
+        h2 {
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: $fontColor;
+            text-align: left;
+        }
+    }
+    
+    .faq-card {
+        height: 50px;
+        background: $altColor;
+        margin-bottom: $gutterdbl;
+        content: "";
+        display: table;
+        clear: both;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 8px;
+        .blog-text {
+            margin: $gutterdbl;
+               
+           }
+        h2 {
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: $fontColor;
+            text-align: left;
+        }
+        
+    }
+    
+	
+    
+    
+    
+    
+    
+/*-------column layout---------*/
+    .row {
+        clear:both;
+        max-width: $maxWidth;
+
+    }
+    .column {padding: 0 $gutter;}
+    @for $i from 1 through 12 {
+        $w: ($i / 12) * 100%;
+        .small-#{$i} {width: $w; float: left;}
+    }
+    
+    
+    
+       
+} // end main
+
+
+/*  ------------- FOOTER -------------  */
+footer {
+    display: block;
+    float: left;
+	width: 100%;
+    margin-top: $gutterdbl;
+    div {
+        max-width: $maxWidth;
+        text-align: center;
+        i {
+            font-size: 60px;
+            color: $primaryColor;
+        }
+        i:hover {
+            color: $altColor;
+            cursor: pointer;
+        }
+    }
+
+} // end footer
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
