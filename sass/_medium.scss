@@ -5,8 +5,18 @@
 
 /* ------------- HEADER ------------- */
 header {
-.search-bar {
-        bottom: $gutterdbl;
+    .header-div {
+        figure {
+            margin-bottom: -38px;
+        }
+        .search-div {
+            display: flex;
+            justify-content: flex-end;
+            .search-bar {
+                width: 180px;
+                
+            }
+        }
     }
 }
 
@@ -14,6 +24,7 @@ nav {
 	.topnav a {
     display: block;
 }
+    
 .topnav .icon {
     display: none;
 }
@@ -22,37 +33,34 @@ nav {
 
 /* ------------- MAIN ------------- */
 main {
+    #main-div {
     max-width: 100em;
     margin: 0 auto;
-
-    figure {
+        .lead {
+            grid-row: 1 / span 2;
+            grid-column: 1;
+        }
+        .secondTop {
+            grid-row: 1;
+            grid-column: 2;
+            align-self: start;
+        }
+        .secondBottom {
+            grid-row: 2;
+            grid-column: 2;
+            align-self: end;
+        }
         
-    }
-    @for $i from 1 through 12 {
-        $w: ($i / 12) * 100%;
-        .medium-#{$i} {width: $w; float: left;}
-    }
-    .space {
-        display: none;
-    }
-    
-    .space-2 {
-        display: none;
-    }
-    
-    .lawer-card {
-        margin-top: $gutterdbl;
-    }
-    
 
+    } //end main div
+} //end main
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+footer {
+    .footer-div {
+        .links-div {
+    .section-links {
+                width: 50%;
+            }
+        }
+    }
 }
